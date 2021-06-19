@@ -172,7 +172,7 @@
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxqIdSgvmXdflKPuzxbLMYplIbUQglu6LTSFI-vX97HInQPiaH6xKOshcaAOIdr5s0aqg/exec';
       const form = document.forms['wpu-contact-from'];
       const btnSend = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.loading');
+      const btnLoading = document.querySelector('.btn-loading');
       const myAlert = document.querySelector('.my-alert');
 
       form.addEventListener('submit', (e) => {
@@ -189,7 +189,7 @@
             //tampilkan alert
             myAlert.classList.toggle('d-none');
             // reset formnya
-
+            form.reset();
             console.log('Success!', response);
           })
           .catch((error) => {
